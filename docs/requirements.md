@@ -1,40 +1,86 @@
-# Social Worker Reporting Application Requirements
+[Previous content remains the same...]
 
-## 1. Overview
-A mobile application designed to streamline the report generation process for social workers after family visits, utilizing voice input and AI-enhanced text processing. The application supports both Hebrew and Arabic interfaces while generating final reports in Hebrew.
+## 11. Proof of Concept (POC) Requirements
 
-## 2. Core Functionality Requirements
+### 11.1 POC Scope
+- Demonstration of core functionality flow:
+  * Voice recording or audio file upload
+  * Speech-to-text conversion
+  * Basic text processing and report generation
+  * Simple report preview and editing
+  * Basic language switching (Hebrew/Arabic UI)
 
-### 2.1 Input Methods
-- Voice recording capabilities for real-time dictation
-- Maximum recording length of 30 minutes in initial phase
-- Real-time recording duration display showing:
-  - Current recording time
-  - Remaining available time in parentheses
-  - Clear visual indicator of maximum allowed duration
-- Option to upload pre-recorded audio files (within length limits)
-- Text input capability as a fallback option
-- Support for both Hebrew and Arabic voice input
-- Offline recording capability with later synchronization
+### 11.2 POC Technical Implementation
+- Web-based implementation for easy sharing and testing
+- Use of open-source and free-tier services:
+  * Browser's built-in WebAudio API for recording
+  * Web Speech API for basic speech recognition
+  * Local storage for saving recordings and drafts
+  * Browser-based text processing
+  * Client-side language detection
+- No backend requirements - fully client-side implementation
+- No cloud service dependencies
+- No database requirements - file-based storage
 
-### 2.2 Language Processing
-- Speech-to-text conversion supporting Hebrew and Arabic
-- Real-time transcription display during recording
-- Automatic language detection for voice input
-- Translation capabilities from Arabic to Hebrew
-- Text correction and editing capabilities
+### 11.3 POC Features
+- Recording Functionality:
+  * Maximum 5-minute recording length for POC phase
+  * Basic audio visualizer
+  * Play/Pause/Stop controls
+  * Recording timer display
+  * Audio file upload option
+- Text Processing:
+  * Basic text extraction from audio
+  * Simple formatting of unstructured text
+  * Basic template application
+  * Manual editing capabilities
+- Language Support:
+  * Basic Hebrew and Arabic UI elements
+  * Language toggle functionality
+  * Simple right-to-left (RTL) support
+- Report Generation:
+  * Basic report template
+  * Simple text formatting
+  * Preview capability
+  * Download as text file
 
-### 2.3 Report Generation
-- AI-enhanced report formatting and structuring
-- Writing style requirements:
-  - Formal but flexible report structure
-  - Preservation of social worker's specific terminology and expressions
-  - Professional language adaptation while maintaining original context
-  - Balance between standardization and personal expression
-- Standardized report templates
-- Professional terminology integration
-- Automatic categorization of report sections
-- Key points extraction and highlighting
-- Required fields validation
+### 11.4 POC Limitations
+- Limited offline functionality
+- Basic speech recognition accuracy
+- Simple text processing without AI enhancement
+- Limited template options
+- Basic error handling
+- No cloud storage or synchronization
+- No user authentication
+- No data persistence between sessions
+- Limited mobile responsiveness
 
-[Rest of the document remains the same...]
+### 11.5 POC Success Criteria
+- Successful demonstration of:
+  * Voice recording and file upload
+  * Basic speech-to-text conversion
+  * Simple report generation
+  * Language switching functionality
+  * Basic user interface navigation
+- Ability to generate a complete report from voice input
+- Support for both Hebrew and Arabic input
+- Functional UI in both languages
+- Export capability for generated reports
+
+### 11.6 POC Deployment
+- GitHub Pages hosting
+- Single-page application (SPA)
+- All dependencies included via CDN
+- No installation requirements
+- Cross-browser compatibility (latest versions)
+- Shareable URL for easy access
+- README with usage instructions
+
+### 11.7 POC Documentation
+- Setup instructions
+- Usage guide
+- Feature limitations
+- Known issues
+- Development setup guide
+- Testing instructions
+- Contribution guidelines
